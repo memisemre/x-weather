@@ -1,27 +1,84 @@
-.app-container{
-    width: 80%;
-    height: 100vh;
-    display: none;
-    grid-template-columns: 30% 70%;
-    column-gap: 15px;
-    grid-template-rows: auto;
+:root{
+	--cloud--color: #489ce9;
+	--sun--color: #f58c59;
 }
-.weather-info-container{
-    background-color: #58a8dd;
-    grid-column: 1;
-    border-radius: 25px;
+.github-logo{
+	position: absolute;
+	bottom: 25px;
 }
-.location-city-name{
-    width: 100%;
-    height: 10%;
-    border-radius: 25px 0 0 25px;
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    color: #e7ffff;
-    font-size: 25px;
+.github-logo a i{
+          font-size: 64px;
+          color: black;
 }
-.clothes-area-container{
-    grid-column: 2;
-    background-color: #F7F6F2;
+.login-animation{
+          display:none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.icons-area{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+}
+.cloud-one,
+.cloud-two{
+	color: var(--cloud--color);
+	font-size: 48px;
+	z-index: 2;
+}
+.cloud-one{
+	animation: cloudMove 4s linear infinite;
+}
+@keyframes cloudMove{
+	0%{
+		margin-right: 0;
+	}
+	50%{
+		margin-right: 40px;
+	}
+	100%{
+		margin-right: 0px;
+	}
+}
+.icons-area-sun{
+	color: var(--sun--color);
+	font-size: 48px;
+	position: absolute;
+	top: 0;
+	left: 50px;
+}
+.animation-dynamic-text {
+	margin-top: 25px;
+	color: #b4b4b4;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	justify-content: center;
+	flex-direction: column;
+	animation: dynamicText 3s infinite;
+}
+@keyframes dynamicText{
+	0%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.app-container {
+          display: flex;
+          color: #6B728E;
+          background-color: rgba(237, 240, 245, 0.1);
+          border-radius: 16px;
+          box-shadow: 16px 16px 32px #d9dde9;
+          border: 1px solid rgba(237, 240, 245, 0.75);
+          width: 80%;
+          height: 70vh;
 }

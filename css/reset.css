@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 100%;
+    user-select: none;
 }
 body{
     width: 100%;
@@ -10,10 +11,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:  #EBF5FB ;
 }
 *::before, *::after{
     content: "";
 }
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');

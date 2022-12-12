@@ -1,5 +1,5 @@
-import { animationFunctions } from "./js/cssAnimations.js"
-function startApp(){
-    animationFunctions();
+import { loginLoaderAnimation } from "./js/loginLoaderAnimation.js";
+function startApp() {
+    loginLoaderAnimation();
+    
 }
-startApp();
