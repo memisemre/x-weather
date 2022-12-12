@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-size: 100%;
     user-select: none;
+font-family: 'Ubuntu', sans-serif;
 }
 body{
     width: 100%;
@@ -15,3 +16,4 @@ body{
 *::before, *::after{
     content: "";
 }
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
