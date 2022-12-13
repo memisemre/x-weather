@@ -1,6 +1,6 @@
 import { getDate } from "./js/getUserDate.js";
 import { getLocation } from "./js/getUserLocation.js";
-import { loginAnimation } from "./js/loginAnimation.js";
+import { loginAnimation } from "./js/loginAnimation.js"; 
 import { cityNameArea,cityHoverText,changeCityContainer,appContainer, changeCityButton, changeCityInput } from "./js/selectors.js";
 function startApp() {
         getDate();

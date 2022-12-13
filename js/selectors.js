@@ -13,3 +13,7 @@ export const cityHoverText = document.querySelector(".hover-text");
 export const changeCityContainer = document.querySelector(".change-city-container");
 export const changeCityInput = document.querySelector(".change-city-container input");
 export const changeCityButton = document.querySelector(".change-city-container button");
+//PopUp
+export const customPopupContainer = document.querySelector(".custom-popup-container");
+export const customPopupText = document.querySelector(".custom-popup-container .alert-text");
+export const customPopupButton = document.querySelector(".custom-popup-container button");
