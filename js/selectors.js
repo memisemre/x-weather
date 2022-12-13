@@ -7,3 +7,5 @@ export const weatherForecast = document.querySelector(".weather-forecast p");
 export const maxTemp = document.querySelector(".max-temp p");
 export const minTemp = document.querySelector(".min-temp p");
 export const wind = document.querySelector(".wind p");
+//Login Animation
+export const loginAnimationContainer = document.querySelector(".login-animation");
