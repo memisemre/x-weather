@@ -11,3 +11,5 @@ export const loginAnimationContainer = document.querySelector(".login-animation"
 export const cityNameArea = document.querySelector(".city-name");
 export const cityHoverText = document.querySelector(".hover-text");
 export const changeCityContainer = document.querySelector(".change-city-container");
+export const changeCityInput = document.querySelector(".change-city-container input");
+export const changeCityButton = document.querySelector(".change-city-container button");
