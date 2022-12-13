@@ -4,5 +4,5 @@ export function getDate(){
         const date = new Date();
         if(date.getMinutes()<10) dateArea.innerHTML = `${date.getHours()} : 0${date.getMinutes()}`;
         else dateArea.innerHTML = `${date.getHours()} : ${date.getMinutes()}`;
-    },1000)
+    },1000);
 }

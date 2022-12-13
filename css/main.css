@@ -1,10 +1,15 @@
 :root{
-	--left--side--background: #FF884B;
-	--right--side--background: #3A5BA0;
+	--left--side--background: #2F4766;
+	--right--side--background: #F47960;
+	--body--background: #121E2A;
 }
 *{
 	color: white;
 }
+body{
+	background-color: var(--body--background);
+}
+
 .login-animation{
 	display: flex;
 	align-items: center;
@@ -22,7 +27,7 @@
 	justify-content: center;
 }
 .login-animation .icon-container .cloud{
-	width: 35%;
+	bacwidth: 35%;
 	display: flex;
 	z-index: 3;
 	margin-top: 0.5em;
@@ -67,7 +72,6 @@
 		opacity: 0;
 	}
 }
-
 .app-container{
 	width: 75%;
 	height: 75vh;
@@ -75,13 +79,21 @@
 	grid-template-columns: repeat(16,1fr);
 	grid-template-rows: repeat(8,1fr);
 }
+
 .app-container #left-side{
 	grid-column: 1/5;
 	grid-row: 2/8;
-	background-color: var(--left--side--background);
 	border-radius: 32px;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
+}
+.app-container #left-side,
+.app-container #right-side{
+	background: rgba(47, 71, 102, 0.1);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	border: 1px solid rgba(47, 71, 102, 0.3);
 }
 .app-container #left-side nav{
 	width: 100%;
@@ -91,25 +103,28 @@
 	justify-content: center;
 }
 .app-container #left-side nav .city-area{
-	width: 30%;
-	height: 50%;
+	width: 75%;
 	display: flex;
-	align-items: center;
-	color: #6B728E;
-	cursor: pointer;
-	margin-left: 1.5em;
-	padding: 4px;
-	border: 2px solid transparent;
-	transition: 0.3s all ease;
-}	
-.app-container #left-side nav .city-area .city {
-	margin-right: 0.5em;
-	font-weight: bold;
-	font-size: 1.2em;
+	padding-left: 2em;
+	position: relative;
 }
-
+.app-container #left-side nav .city-area .city-name{
+	display: flex;
+	cursor: pointer;
+}
+.app-container #left-side nav .city-area .city-name p{
+	margin-right: 1em;
+}
+.app-container #left-side nav .city-area .hover-text{
+	position: absolute;
+	top: 32px;
+	left: 16px;
+	opacity: 0;
+	color: white;
+	transition: 0.3s all;
+}
 .app-container #left-side nav .date{
-	width: 70%;
+	width: 25%;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -130,11 +145,17 @@
 	display: flex;
 	font-size: 3em;
 }
+.app-container #left-side main .weather-temp p{
+	font-style: oblique;
+}
 .app-container #left-side main .weather-temp p sup{
 	font-size: 0.5em;
 }
 .app-container #left-side main .weather-forecast{
 	margin-top: 1em;
+}
+.app-container #left-side main .weather-forecast{
+	letter-spacing: 0.1em;
 	font-weight: bold;
 }
 .app-container #left-side main .other-weather-infos{
@@ -161,7 +182,6 @@
 	font-size: 0.5em;
 }
 .app-container #right-side{
-	background-color: var(--right--side--background);
 	grid-column: 5/17;
 	grid-row: 1/9;
 	border-radius: 32px;

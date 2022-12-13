@@ -3,7 +3,7 @@
 <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>X Weather App</title>
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/main.css">
@@ -24,20 +24,19 @@
 		<div class="animation-text">Loading App...</div>
 	</div>
 	<div class="app-container">
-	      <section id="left-side">
-                  <nav>
-                        <div class="city-area">
-					<div class="city">
+	    <section id="left-side">
+            <nav>
+				<div class="city-area">
+					<div class="city-name">
 						<p>Ankara</p>
+						<i class="fa-solid fa-location-arrow"></i>
 					</div>
-					<div class="edit-city-btn">
-						<i class="fa-solid fa-location-dot"></i>
-					</div>
+					<div class="hover-text">Change Location</div>
 				</div>
 				<div class="date">
 					<p>11:11</p>
 				</div>
-                  </nav>
+            </nav>
 			<main>
 				<div class="weather-img">
 					<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
@@ -63,10 +62,10 @@
 					</div>
 				</div>
 			</main>
-            </section>
-            <section id="right-side">
-
-            </section>
+        </section>
+        <section id="right-side">
+			
+        </section>
 	</div>
 	<script src="app.js" type="module"></script>
 	<script src="https://kit.fontawesome.com/c2e884e60d.js" crossorigin="anonymous"></script>
