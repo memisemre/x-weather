@@ -1,7 +1,8 @@
-import { weatherApi } from "./js/weatherForecast.js";
-import { getDate } from "./js/date.js";
+import { getDate } from "./js/getUserDate.js";
+import { getLocation } from "./js/getUserLocation.js"
 function startApp() {
-          weatherApi();
-          getDate();
+        getDate();
+        getLocation();
 }
+
 startApp();
