@@ -27,7 +27,7 @@ body{
 	justify-content: center;
 }
 .login-animation .icon-container .cloud{
-	bacwidth: 35%;
+	width: 35%;
 	display: flex;
 	z-index: 3;
 	margin-top: 0.5em;
@@ -71,6 +71,54 @@ body{
 	50%{
 		opacity: 0;
 	}
+}
+.change-city-container{
+	width: 40%;
+	height: 30vh;
+	background: rgba(47, 71, 102, 0.1);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	border: 1px solid rgba(47, 71, 102, 0.3);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.change-city-container input{
+	width: 50%;
+	padding: 16px 0 16px 16px;
+	background-color: transparent;
+	border: 4px solid rgba(47,71,102,0.3);
+	color: #eee;
+	border-radius: 8px;
+}
+.change-city-container button{
+	color: #fff;
+	background-color: transparent;
+	border: none;
+	margin-top: 1em;
+	padding: 16px;
+	font-weight: bold;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	cursor: pointer;
+}
+.change-city-container button:hover:after{
+	width: 100%;
+}
+.change-city-container button:after{
+	transition: 0.3s all ease;
+	border-radius: 16px;
+	content: "";
+	margin-top: 0.5em;
+	display: block;
+	width: 16px;
+	height: 4px;
+	background-color: #85C1E9;
 }
 .app-container{
 	width: 75%;

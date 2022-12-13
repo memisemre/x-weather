@@ -10,3 +10,4 @@ export const wind = document.querySelector(".wind p");
 export const loginAnimationContainer = document.querySelector(".login-animation");
 export const cityNameArea = document.querySelector(".city-name");
 export const cityHoverText = document.querySelector(".hover-text");
+export const changeCityContainer = document.querySelector(".change-city-container");
