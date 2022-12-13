@@ -1,19 +1,114 @@
+:root{
+	--left--side--background: #FF884B;
+	--right--side--background: #3A5BA0;
+}
+*{
+	color: white;
+}
 .app-container{
 	width: 75%;
 	height: 75vh;
 	display: grid;
-	grid-template-columns: repeat(4,1fr);
+	grid-template-columns: repeat(16,1fr);
 	grid-template-rows: repeat(8,1fr);
 }
 .app-container #left-side{
-	grid-column: 1;
+	grid-column: 1/5;
 	grid-row: 2/8;
-	background-color: #FF884B;
+	background-color: var(--left--side--background);
 	border-radius: 32px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.app-container #left-side nav{
+	width: 100%;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.app-container #left-side nav .country-area{
+	width: 30%;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	color: #6B728E;
+	cursor: pointer;
+	margin-left: 1.5em;
+	padding: 4px;
+	background: rgba(255, 255, 255, 0.1);
+	border: 2px solid transparent;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
+	transition: 0.3s all ease;
+}
+.app-container #left-side nav .country-area:hover{
+	border-color: rgba(255, 255, 255, 0.3);
+}
+.app-container #left-side nav .country-area .country {
+	margin-right: 0.5em;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.app-container #left-side nav .date{
+	width: 70%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: 2em;
+	font-weight: bold;
+	font-size: 1em;
+	color: #6B728E;
+}
+.app-container #left-side main{
+	width: 100%;
+	height: calc(100% - 10vh);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.app-container #left-side main .weather-temp{
+	display: flex;
+	font-size: 3em;
+}
+.app-container #left-side main .weather-temp p sup{
+	font-size: 0.5em;
+}
+.app-container #left-side main .weather-forecast{
+	margin-top: 1em;
+	font-weight: bold;
+}
+.app-container #left-side main .other-weather-infos{
+	margin-top: 2em;
+	width: 100%;
+	height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.app-container #left-side main .other-weather-infos div{
+	width: 25%;
+	height: 15vh;
+	font-size: 1.5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.app-container #left-side main .other-weather-infos div p{
+	margin-top: 0.5em;
+}
+.app-container #left-side main .other-weather-infos div p sup{
+	font-size: 0.5em;
 }
 .app-container #right-side{
-	background-color: #D6E4E5;
-	grid-column: 2/5;
+	background-color: var(--right--side--background);
+	grid-column: 5/17;
 	grid-row: 1/9;
 	border-radius: 32px;
 }
