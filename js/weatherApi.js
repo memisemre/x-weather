@@ -14,11 +14,11 @@ export function weatherAPI(lat,long){
 	.then((data)=>{
 		cityArea.innerHTML = `${data.name}`;
 		weatherImage.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">`;
-		weatherTemp.innerHTML = `${data.main.temp}<sup>0</sup>`;
+		weatherTemp.innerHTML = `${Math.round(data.main.temp)}<sup>0</sup>`;
 		weatherForecast.innerHTML = `${data.weather[0].main}`;
-		maxTemp.innerHTML = `${data.main.temp_max}<sup>0</sup>`;
-		minTemp.innerHTML = `${data.main.temp_min}<sup>0</sup>`;
-		wind.innerHTML = `${data.wind.speed}<sup></sup>`;
+		maxTemp.innerHTML = `${Math.round(data.main.temp_max)}<sup>0</sup>`;
+		minTemp.innerHTML = `${Math.round(data.main.temp)}<sup>0</sup>`;
+		wind.innerHTML = `${data.wind.speed}<sup></sup> km/s`;
 		console.log(data)
 	})
 }
