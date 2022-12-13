@@ -1,3 +1,3 @@
 export const appContainer = document.querySelector(".app-container");
-export const animationDynamicText = document.querySelector(".animation-dynamic-text p");
-export const loginAnimationContainer = document.querySelector(".login-animation");
+export const dateArea = document.querySelector(".date");
+export const countryArea = document.querySelector(".country p");

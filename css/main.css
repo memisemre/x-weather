@@ -27,7 +27,7 @@
 	align-items: center;
 	justify-content: center;
 }
-.app-container #left-side nav .country-area{
+.app-container #left-side nav .city-area{
 	width: 30%;
 	height: 50%;
 	display: flex;
@@ -36,18 +36,18 @@
 	cursor: pointer;
 	margin-left: 1.5em;
 	padding: 4px;
-	background: rgba(255, 255, 255, 0.1);
 	border: 2px solid transparent;
+	transition: 0.3s all ease;
+}
+.app-container #left-side nav .city-area:hover{
+	background: rgba(255, 255, 255, 0.1);
 	border-radius: 8px;
 	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(2px);
 	-webkit-backdrop-filter: blur(2px);
-	transition: 0.3s all ease;
-}
-.app-container #left-side nav .country-area:hover{
 	border-color: rgba(255, 255, 255, 0.3);
 }
-.app-container #left-side nav .country-area .country {
+.app-container #left-side nav .city-area .city {
 	margin-right: 0.5em;
 	font-weight: bold;
 	font-size: 1.2em;
@@ -62,7 +62,6 @@
 	padding-right: 2em;
 	font-weight: bold;
 	font-size: 1em;
-	color: #6B728E;
 }
 .app-container #left-side main{
 	width: 100%;
