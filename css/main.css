@@ -121,11 +121,12 @@ body{
 	background-color: #85C1E9;
 }
 .custom-popup-container{
-	background: rgba(47, 71, 102, 0.1);
+	background: rgba(255,255,255,0.1);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(2px);
-	-webkit-backdrop-filter: blur(2px);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
 	border: 1px solid rgba(47, 71, 102, 0.3);
+	border: 4px solid #F47960;
 	width: 30%;
 	height: 35vh;
 	position: absolute;
@@ -170,6 +171,7 @@ body{
 	margin-top: 1em;
 	font-size: 24px;
 	max-width: 75%;
+	text-align: center;
 }
 .custom-popup-container button{
 	background-color: transparent;
