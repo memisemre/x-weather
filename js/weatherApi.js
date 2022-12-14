@@ -38,11 +38,3 @@ export function weatherCityAPI(city){
 		}
 	})
 }
-// const temporaryData = fetch("https://api.openweathermap.org/data/2.5/weather?q=ankara&appid=b923a9422672988586e6e7f2bcef29c9&units=metric&lang=en")
-// .then((res)=>res.json())
-// .then((res)=>{
-// 	  if(res.cod === "404" ){
-// 		    console.log("error");
-// 	  } 
-// 	  else console.log(res);
-// })

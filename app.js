@@ -10,7 +10,7 @@ function startApp() {
         loginAnimation();
 }
 startApp();
-cityNameArea.addEventListener("mouseover",(e)=>{
+cityNameArea.addEventListener("mouseover",()=>{
         cityHoverText.style.opacity = "1";
 });
 cityNameArea.addEventListener("mouseleave",()=>{
