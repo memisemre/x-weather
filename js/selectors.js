@@ -14,7 +14,11 @@ export const changeCityContainer = document.querySelector(".change-city-containe
 export const changeCityInput = document.querySelector(".change-city-container input");
 export const changeCityButton = document.querySelector(".change-city-container button");
 export const combinTemp = document.querySelector("#right-side .title p");
-//PopUp
 export const customPopupContainer = document.querySelector(".custom-popup-container");
 export const customPopupText = document.querySelector(".custom-popup-container .alert-text");
 export const customPopupButton = document.querySelector(".custom-popup-container button");
+export const combinCap = document.querySelector(".cap-area");
+export const scarfArea = document.querySelector(".scarf-area");
+export const shirtArea = document.querySelector(".shirt-area");
+export const pantArea = document.querySelector(".pant-area");
+export const shoesArea = document.querySelector(".shoes-area");
