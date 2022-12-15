@@ -5,9 +5,9 @@ import{cityArea,
 	maxTemp,
 	minTemp,
 	wind
-} from "./selectors.js"
-import { alertBox } from "./alertPopup.js"
-
+} from "./selectors.js";
+import { alertBox } from "./alertPopup.js";
+import { selectClothes } from "./clothes.js";
 export function weatherAPI(lat,long){
       let data = fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b923a9422672988586e6e7f2bcef29c9&units=metric&lang=en`)
 	.then((res)=>res.json())
@@ -19,9 +19,10 @@ export function weatherAPI(lat,long){
 		maxTemp.innerHTML = `${Math.round(data.main.temp_max)}<sup>0</sup>`;
 		minTemp.innerHTML = `${Math.round(data.main.temp)}<sup>0</sup>`;
 		wind.innerHTML = `${data.wind.speed}<sup></sup> km/s`;
-		console.log(data)
+		selectClothes(data.main.temp);
 	})
 }
+
 export function weatherCityAPI(city){
 	let data = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b923a9422672988586e6e7f2bcef29c9&units=metric&lang=en`)
 	.then((res)=>res.json())
@@ -34,7 +35,9 @@ export function weatherCityAPI(city){
 			weatherForecast.innerHTML = `${data.weather[0].main}`;
 			maxTemp.innerHTML = `${data.main.temp_max}<sup>0</sup>`;
 			minTemp.innerHTML = `${data.main.temp_min}<sup>0</sup>`;
-			wind.innerHTML = `${data.wind.speed}<sup></sup>`;
+			wind.innerHTML = `${data.wind.speed}<sup></sup> km/s`;
+			selectClothes(data.main.temp);
 		}
 	})
 }
+

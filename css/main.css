@@ -293,4 +293,46 @@ body{
 	grid-column: 5/17;
 	grid-row: 1/9;
 	border-radius: 32px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+#right-side .title{
+	height: 10vh;
+}
+#right-side .title p{
+	font-weight: bold;
+	font-size: 24px;
+}
+#right-side .title p sup{
+	font-size: 16px;
+}
+#right-side div{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#right-side .cap-area{
+	height: 10vh;
+}
+#right-side .scarf-area{
+	height: 10vh;
+}
+#right-side .scarf-area img,
+#right-side .cap-area img,
+#right-side .shoes-area img{
+	width: 64px;
+}
+#right-side .shoes-area{
+	height: 5vh;
+}
+#right-side .shirt-area{
+	height: 13vh;
+}
+#right-side .shirt-area img{
+	width: 128px;
+}
+#right-side .pant-area{
+	height: 17vh;
 }
