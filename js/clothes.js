@@ -125,7 +125,7 @@ function selectClothes(coldness){
       clothes.forEach((clothe)=>{
             if(clothe.res === coldness){
                   if(clothe.gender === "man"){
-                        console.log(clothe)
+                        
                         if(clothe.categ === "shoes"){
                               shoesArea.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
                         }
