@@ -19,9 +19,8 @@ export function weatherAPI(lat,long){
 		maxTemp.innerHTML = `${Math.round(data.main.temp_max)}<sup>0</sup>`;
 		minTemp.innerHTML = `${Math.round(data.main.temp_min)}<sup>0</sup>`;
 		wind.innerHTML = `${data.wind.speed}<sup></sup> km/s`;
-		if(data.main.temp <10) coldness = 3;
-		if(10 < data.main.temp < 25) coldness = 2;
-		if(25 < data.main.temp) coldness = 1;
+		if(data.main.temp <15) coldness = 2;
+		if(15 <= data.main.temp) coldness = 1;
 		setValues(data.main.temp,coldness);
 	})}
 export function weatherCityAPI(city){
@@ -37,9 +36,8 @@ export function weatherCityAPI(city){
 			maxTemp.innerHTML = `${Math.round(data.main.temp_max)}<sup>0</sup>`;
 			minTemp.innerHTML = `${Math.round(data.main.temp_min)}<sup>0</sup>`;
 			wind.innerHTML = `${data.wind.speed}<sup></sup> km/s`;
-			if(data.main.temp <10) coldness = 3;
-			if(10 < data.main.temp < 25) coldness = 2;
-			if(25 < data.main.temp) coldness = 1;
+			if(data.main.temp <15) coldness = 2;
+			if(15 <= data.main.temp) coldness = 1;
 			setValues(data.main.temp,coldness);
 		}
 	})}

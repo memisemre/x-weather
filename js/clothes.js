@@ -1,5 +1,5 @@
 import { combinTemp,
-      combinCap,
+      capArea,
       scarfArea,
       shirtArea,
       pantArea,
@@ -16,105 +16,53 @@ export const genderIcons = [
 export const clothes = [
       {
             name : "beret",
-            categ : "head",
-            gender : "mw",
-            res: 3
-      },
-      {
-            name : "cap-man",
-            categ : "head",
-            gender : "man",
+            bodyArea : "cap",
             res : 2
       },
       {
-            name : "cap-woman",
-            categ : "head",
-            gender : "woman",
-            res : 2
-      },
-      {
-            name : "sun-hat",
-            categ : "head",
-            gender : "woman",
+            name : "cap",
+            bodyArea : "cap",
             res : 1
       },
       {
             name : "scarf",
-            categ : "scarf",
-            gender : "mw",
-            res : 3
-      },
-      {
-            name : "dress-woman",
-            categ : "fullBody",
-            gender : "woman",
+            bodyArea : "scarf",
             res : 2
       },
       {
-            name : "suit-man",
-            categ : "fullBody",
-            gender : "woman",
-            res : 2
-      },
-      {
-            name : "tshirt-man",
-            categ : "upperBody",
-            gender : "man",
-            res : 2
-      },
-      {
-            name : "tshirt-woman",
-            categ : "upperBody",
-            gender : "man",
+            name : "tshirt",
+            bodyArea : "shirt",
             res : 1
       },
       {
-            name : "pant-man",
-            categ : "pants",
-            gender : "man",
-            res : 2
-      },
-      {
-            name : "pant-woman",
-            categ : "pants",
-            gender : "woman",
-            res : 2
-      },
-      {
-            name : "skirt-woman",
-            categ : "pants",
-            gender : "woman",
+            name : "shirt",
+            bodyArea : "shirt",
             res : 1
       },
       {
-            name : "boot-man",
-            categ : "shoes",
-            gender : "man",
-            res : 3
-      },
-      {
-            name : "shoes-man",
-            categ : "shoes",
-            gender : "man",
+            name : "jacket",
+            bodyArea : "shirt",
             res : 2
       },
       {
-            name : "shoes-woman",
-            categ : "shoes",
-            gender : "woman",
+            name : "pants",
+            bodyArea : "pant",
             res : 2
       },
       {
-            name : "boot-woman",
-            categ: "shoes",
-            gender : "woman",
-            res : 3
-      },
-      {
-            name : "heels-woman",
-            categ : "shoes",
-            gender : "woman",
+            name : "shorts",
+            bodyArea : "pant",
             res : 1
+      },
+      {
+            name : "shoes",
+            bodyArea : "shoes",
+            res : 1
+      },
+      {
+            name : "boots",
+            bodyArea : "shoes",
+            res : 2
       }
 ]
 export function setValues(temp,coldness){
@@ -124,21 +72,11 @@ export function setValues(temp,coldness){
 function selectClothes(coldness){
       clothes.forEach((clothe)=>{
             if(clothe.res === coldness){
-                  if(clothe.gender === "man"){
-                        
-                        if(clothe.categ === "shoes"){
-                              shoesArea.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
-                        }
-                        if(clothe.categ === "pants"){
-                              pantArea.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
-                        }
-                        if(clothe.categ === "upperBody"){
-                              shirtArea.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
-                        }
-                        if(clothe.categ === "head"){
-                              combinCap.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
-                        }
-                  }
+                  if(clothe.bodyArea === "cap") capArea.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
+                  if(clothe.bodyArea === "scarf") scarfArea.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
+                  if(clothe.bodyArea === "shirt") shirtArea.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
+                  if(clothe.bodyArea === "pant") pantArea.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
+                  if(clothe.bodyArea === "shoes") shoesArea.innerHTML = `<img src="./img/${clothe.name}.png" alt="">`;
             }
       })
 }
