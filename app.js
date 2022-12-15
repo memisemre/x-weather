@@ -3,7 +3,6 @@ import { getLocation } from "./js/getUserLocation.js";
 import { loginAnimation } from "./js/loginAnimation.js"; 
 import { alertBox } from "./js/alertPopup.js"
 import { weatherCityAPI } from "./js/weatherApi.js";
-
 import { cityNameArea,cityHoverText,changeCityContainer,appContainer, changeCityButton, changeCityInput, loginAnimationContainer} from "./js/selectors.js";
 function startApp() {
         getDate();
