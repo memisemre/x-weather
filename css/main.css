@@ -1,13 +1,8 @@
-:root{
-	--left--side--background: #2F4766;
-	--right--side--background: #F47960;
-	--body--background: #121E2A;
-}
 *{
 	color: white;
 }
 body{
-	background-color: var(--body--background);
+	background-color: #121E2A;
 }
 
 .login-animation{
@@ -192,16 +187,8 @@ body{
 	grid-column: 1/5;
 	grid-row: 2/8;
 	border-radius: 32px;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-.app-container #left-side,
-.app-container #right-side{
-	background: rgba(47, 71, 102, 0.1);
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(2px);
-	-webkit-backdrop-filter: blur(2px);
-	border: 1px solid rgba(47, 71, 102, 0.3);
+	margin-right: 1em;
+	background-color: #ED9213;
 }
 .app-container #left-side nav{
 	width: 100%;
@@ -296,6 +283,7 @@ body{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	background-color: #ED9213;
 }
 #right-side .title{
 	height: 10vh;
