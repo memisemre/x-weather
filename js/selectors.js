@@ -22,3 +22,5 @@ export const scarfArea = document.querySelector(".scarf-area");
 export const shirtArea = document.querySelector(".shirt-area");
 export const pantArea = document.querySelector(".pant-area");
 export const shoesArea = document.querySelector(".shoes-area");
+export const genderMale = document.querySelector(".genders .male");
+export const genderFemale = document.querySelector(".genders .female");
