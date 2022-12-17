@@ -6,7 +6,7 @@ import{cityArea,
 	minTemp,
 	wind} from "./selectors.js";
 import { alertBox } from "./alertPopup.js";
-import { setValues } from "./clothes.js";
+import { setColdness } from "./clothes.js";
 let coldness;
 export function weatherAPI(lat,long){
 	fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=b923a9422672988586e6e7f2bcef29c9&units=metric&lang=en`)
@@ -21,7 +21,7 @@ export function weatherAPI(lat,long){
 		wind.innerHTML = `${data.wind.speed}<sup></sup> km/s`;
 		if(data.main.temp <15) coldness = 2;
 		if(15 <= data.main.temp) coldness = 1;
-		setValues(data.main.temp,coldness);
+		setColdness(data.main.temp,coldness);
 	})}
 export function weatherCityAPI(city){
 	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b923a9422672988586e6e7f2bcef29c9&units=metric&lang=en`)
@@ -38,6 +38,6 @@ export function weatherCityAPI(city){
 			wind.innerHTML = `${data.wind.speed}<sup></sup> km/s`;
 			if(data.main.temp <15) coldness = 2;
 			if(15 <= data.main.temp) coldness = 1;
-			setValues(data.main.temp,coldness);
+			setColdness(data.main.temp,coldness);
 		}
 	})}

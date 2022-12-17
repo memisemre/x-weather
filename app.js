@@ -4,11 +4,12 @@ import { loginAnimation } from "./js/loginAnimation.js";
 import { alertBox } from "./js/alertPopup.js"
 import { weatherCityAPI } from "./js/weatherApi.js";
 import { cityNameArea,cityHoverText,changeCityContainer,appContainer, changeCityButton, changeCityInput, loginAnimationContainer , genderFemale, genderMale} from "./js/selectors.js";
-let gender;
+import { setUserGender } from "./js/clothes.js";
 function startApp() {
         getDate();
         getLocation();
-        loginAnimation();
+
+        setUserGender("male");
 }
 startApp();
 cityNameArea.addEventListener("mouseover",()=>{cityHoverText.style.opacity = "1";});
@@ -35,10 +36,10 @@ changeCityButton.addEventListener("click",()=>{
 genderFemale.onclick = ()=>{
         genderFemale.classList.add("gender-active");
         genderMale.classList.remove("gender-active");
-        gender = "female";
+        setUserGender("female");
 }
 genderMale.onclick = ()=>{
         genderMale.classList.add("gender-active");
         genderFemale.classList.remove("gender-active");
-        gender = "male";
+        setUserGender("male");
 }
